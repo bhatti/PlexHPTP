@@ -20,6 +20,7 @@ PlexHPTP will provide:
 h2. Components
 
 PlexHPTP consists of following components
+
 h3. Domain Classes
     * File
 
@@ -55,6 +56,7 @@ h3. Utility Layer
 
 
  h1. Getting Started
+    * Following are steps to start developing or deploying client/server components
 
  h3. Maven Setup
     * mvn install:install-file -DgroupId=swing -DartifactId=debug -Dversion=1.0 -Dpackaging=jar -Dfile=lib/debug.jar 
@@ -76,5 +78,3 @@ h3. Starting GUI Applet
     * cd target
     * ln -s ../src/main/html/index.html
     * open index.html 
-
-
