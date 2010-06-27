@@ -1,0 +1,80 @@
+h1. Introduction to PlexHPTP
+
+
+h2. Vision
+
+PlexHPTP will provide client and server components to simplify multiple file transfers.
+
+h3. Mission Statement
+PlexHPTP will provide:
+    * Concurrent File Transfers - be able to upload or download multiple files simultaneously.
+    * Recovery from Partial Failure - be able to resume file transfers from the point when the network or system failure occurred.
+    * Reliability - Use checksum such as MD5, SHA1 to verify file transfers.
+    * Progress Bar with Interruption - Provide progress bar for the file transfer with the ability to pause/resume file transfers.
+    * Support multiple protocols such as HTTP, FTP, S3, etc.
+    * Schedule file transfer (that can be used for backup)
+    * Compress/Zip files
+    * Encryption - support PGP, public key or password based encryption
+
+
+h2. Components
+
+PlexHPTP consists of following components
+h3. Domain Classes
+    * File
+
+h3. File Transfer Interfaces 
+
+    * TransferClient
+    * TransferListener
+
+h3. HTTP 
+    * HTTP implementation of clients and servers
+    * Note that partial failure recovery requires PlexHPTP provided server components.
+
+h3. FTP
+    * FTP implementation of clients 
+
+h3. S3
+    * HTTP implementation of clients 
+
+h3. Scheduling
+    * Quartz based scheduling
+
+h3. JMX 
+
+    * This layer defines JMX helper classes for managing services and configuration remotely.
+
+h3. Metrics 
+
+    * This layer provides performance measurement classes such as Timing class to measure method invocation benchmarks.
+
+h3. Utility Layer
+
+    * This layer provides helper classes.
+
+
+ h1. Getting Started
+
+ h3. Maven Setup
+    * mvn install:install-file -DgroupId=swing -DartifactId=debug -Dversion=1.0 -Dpackaging=jar -Dfile=lib/debug.jar 
+    * mvn install:install-file -DgroupId=aws -DartifactId=aws-java-sdk -Dversion=1.0 -Dpackaging=jar -Dfile=lib/aws-java-sdk-1.0.005.jar 
+    * mvn install:install-file -DgroupId=java -DartifactId=java-plugin -Dversion=jre-16 -Dpackaging=jar -Dfile=lib/plugin.jar 
+    * mvn install:install-file -DgroupId=org.apache.pivot -DartifactId=pivot-core -Dversion=1.5 -Dpackaging=jar -Dfile=lib/pivot-core-1.5.jar 
+    * mvn install:install-file -DgroupId=org.apache.pivot -DartifactId=pivot-wtk -Dversion=1.5 -Dpackaging=jar -Dfile=lib/pivot-wtk-1.5.jar 
+    * mvn install:install-file -DgroupId=org.apache.pivot -DartifactId=pivot-web -Dversion=1.5 -Dpackaging=jar -Dfile=lib/pivot-web-1.5.jar 
+    * mvn install:install-file -DgroupId=org.apache.pivot -DartifactId=pivot-wtk-terra -Dversion=1.5 -Dpackaging=jar -Dfile=lib/pivot-wtk-terra-1.5.jar 
+    * mvn install:install-file -DgroupId=org.apache.pivot -DartifactId=pivot-charts -Dversion=1.5 -Dpackaging=jar -Dfile=lib/pivot-charts-1.5.jar 
+
+h3. Starting HTTP Server
+    * mvn exec:java -Dexec.mainClass="com.plexobject.hptp.service.FileServer"
+
+h3. Starting GUI Applet
+    * jar -xf ../target/hptp-0.1-SNAPSHOT-jar-with-dependencies.jar 
+    * jar -cf ../target/hptp-0.1-SNAPSHOT-jar-with-dependencies.jar *
+    * /System/Library/Frameworks/JavaVM.framework/Versions/1.6.0/Home/bin/jarsigner -keystore plexhptp.jks -storepass plexhptp -keypass plexhptp target/hptp-0.1-SNAPSHOT-jar-with-dependencies.jar plexhptp
+    * cd target
+    * ln -s ../src/main/html/index.html
+    * open index.html 
+
+

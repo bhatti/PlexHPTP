@@ -1,9 +1,0 @@
-mvn install:install-file -DgroupId=swing -DartifactId=debug -Dversion=1.0 -Dpackaging=jar -Dfile=lib/debug.jar 
-mvn install:install-file -DgroupId=aws -DartifactId=aws-java-sdk -Dversion=1.0 -Dpackaging=jar -Dfile=lib/aws-java-sdk-1.0.005.jar 
-mvn install:install-file -DgroupId=java -DartifactId=java-plugin -Dversion=jre-16 -Dpackaging=jar -Dfile=lib/plugin.jar 
-mvn install:install-file -DgroupId=org.apache.pivot -DartifactId=pivot-core -Dversion=1.5 -Dpackaging=jar -Dfile=lib/pivot-core-1.5.jar 
-mvn install:install-file -DgroupId=org.apache.pivot -DartifactId=pivot-wtk -Dversion=1.5 -Dpackaging=jar -Dfile=lib/pivot-wtk-1.5.jar 
-mvn install:install-file -DgroupId=org.apache.pivot -DartifactId=pivot-web -Dversion=1.5 -Dpackaging=jar -Dfile=lib/pivot-web-1.5.jar 
-mvn install:install-file -DgroupId=org.apache.pivot -DartifactId=pivot-wtk-terra -Dversion=1.5 -Dpackaging=jar -Dfile=lib/pivot-wtk-terra-1.5.jar 
-mvn install:install-file -DgroupId=org.apache.pivot -DartifactId=pivot-charts -Dversion=1.5 -Dpackaging=jar -Dfile=lib/pivot-charts-1.5.jar 
-
