@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>File Transfer Applet</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252"/>
+  </head>
+
+<body>
+    <script src="http://www.java.com/js/deployJava.js"></script>
+    <script> 
+        var attributes = { code:'com.plexobject.hptp.gui.TransferApplet.class',
+            archive:'hptp-0.1-SNAPSHOT-jar-with-dependencies.jar',  width:800, height:600} ; 
+        var parameters = {jnlp_href: 'hptp-client.jnlp', draggable: 'true',
+            'group' : 'mygroup'}; 
+        deployJava.runApplet(attributes, parameters, '1.5'); 
+    </script>
+    <noscript>
+      <applet code="com.plexobject.hptp.gui.TransferApplet.class" archive="hptp-0.1-SNAPSHOT-jar-with-dependencies.jar" width="800" height="600"><param name="jnlp_href" value="dynamictree-applet.jnlp"><param name="codebase_lookup" value="true"></applet>
+    </noscript>
+</body>
+</html>

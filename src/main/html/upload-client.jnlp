@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jnlp spec="1.0+" codebase="" href="">
+    <information>
+        <title>PlexHPTP</title>
+        <vendor>PlexObject Solutions, Inc.</vendor>
+        <offline-allowed />
+        <shortcut online="false"> <desktop /> </shortcut>
+      </information>
+
+    <resources>
+        <!-- Application Resources --> 
+        <j2se version="1.5+"
+              href="http://java.sun.com/products/autodl/j2se" />
+        <jar href="applet_InvokingJavaScriptFromApplet.jar" main="true" />
+
+    </resources>
+    <applet-desc 
+         name="com.plexobject.hptp.gui.TransferClient.class"
+         main-class="javatojs.DataSummaryApplet"
+         width="300"
+         height="300">
+     </applet-desc>
+     <update check="background"/>
+</jnlp>
+
